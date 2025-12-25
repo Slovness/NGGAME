@@ -153,18 +153,23 @@
     <p class="instruction">Нажми каждую из них по очереди</p>
     
     <div class="buttons-container">
-        <button class="btn" onclick="handleClick(1)">
-            <span class="btn-text">Кнопка</span>
-        </button>
-        <button class="btn" onclick="handleClick(2)">
-            <span class="btn-text">Кнопка</span>
-        </button>
-        <button class="btn" onclick="handleClick(3)">
-            <span class="btn-text">Кнопка</span>
-        </button>
+    <button class="btn" onclick="openLink('https://example.com/1')">
+        <span class="btn-text">Кнопка</span>
+    </button>
+    <button class="btn" onclick="openLink('https://example.com/2')">
+        <span class="btn-text">Кнопка</span>
+    </button>
+    <button class="btn" onclick="openLink('https://example.com/3')">
+        <span class="btn-text">Кнопка</span>
+    </button>
+</div>
+
     </div>
 
     <script>
+        function openLink(url) {
+        window.open(url, '_blank');
+    }
         let clickedOrder = [];
         
         function handleClick(num) {
